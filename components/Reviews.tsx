@@ -18,35 +18,73 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section className="px-6 py-16">
-      <div className="mx-auto max-w-7xl">
+    <section className="bg-[#f7f2ed] px-5 py-16 sm:px-6 md:py-20">
+
+      <div className="mx-auto max-w-6xl">
+
+        {/* SECTION HEADING */}
+
         <div className="mb-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
+
+          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#c59655]">
             Reviews
           </p>
 
-          <h2 className="mt-2 text-3xl font-bold text-slate-900">
+          <h2 className="mt-3 text-2xl font-bold tracking-tight text-[#171717] sm:text-3xl">
             Trusted by Our Passengers
           </h2>
+
+          <p className="mt-3 text-sm leading-6 text-[#77716b]">
+            Discover what makes our private transportation experience different.
+          </p>
+
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        {/* REVIEW CARDS */}
+
+        <div className="grid gap-5 md:grid-cols-3">
+
           {reviews.map((review) => (
+
             <article
               key={review.id}
-              className="rounded-2xl border border-slate-200 bg-white p-6"
+              className="group rounded-[24px] border border-white/5 bg-[#111111] p-6 shadow-[0_8px_20px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-[#d9a45f]/40 hover:shadow-[0_14px_30px_rgba(0,0,0,0.12)]"
             >
-              <p className="leading-7 text-slate-600">
+
+              {/* STARS */}
+
+              <div className="mb-5 flex gap-1 text-sm tracking-wider text-[#d9a45f]">
+                ★★★★★
+              </div>
+
+              {/* REVIEW TEXT */}
+
+              <p className="text-xs leading-7 text-white/70 sm:text-[13px]">
                 “{review.text}”
               </p>
 
-              <p className="mt-5 font-semibold text-slate-900">
+              {/* DIVIDER */}
+
+              <div className="my-5 h-px bg-white/10" />
+
+              {/* CUSTOMER */}
+
+              <p className="text-sm font-bold text-white">
                 {review.name}
               </p>
+
+              <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.2em] text-[#d9a45f]">
+                Passenger
+              </p>
+
             </article>
+
           ))}
+
         </div>
+
       </div>
+
     </section>
   );
 }

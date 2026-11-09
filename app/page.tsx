@@ -9,6 +9,7 @@ import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <HowItWorks />
       <Reviews />
       <FAQ />
+      <Contact />
       <FinalCTA />
       <Footer />
     </main>

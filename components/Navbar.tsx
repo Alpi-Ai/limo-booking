@@ -1,68 +1,87 @@
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-[#E6E2DA] bg-[#F6F4EF]/90 backdrop-blur">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+    <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#111111] text-white shadow-[0_4px_15px_rgba(0,0,0,0.12)]">
+
+      <nav className="mx-auto flex h-[68px] max-w-6xl items-center justify-between px-5 sm:px-7">
+
+        {/* LOGO */}
+
         <a
-          href="#"
-          className="text-xl font-bold tracking-[0.18em] text-[#172033]"
+          href="#home"
+          className="shrink-0 text-[15px] font-bold tracking-[0.055em] text-[#e3ae70] transition-colors duration-300 hover:text-[#c58b48]"
         >
-          LIMO
+          torontariolimo.ca
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
+        {/* NAVIGATION */}
+
+        <div className="hidden items-center gap-7 md:flex">
+
           <a
-            href="#"
-            className="text-sm font-medium text-[#667085] transition hover:text-[#172033]"
+            href="#home"
+            className="text-[12px] font-medium text-white/85 transition-colors duration-300 hover:text-[#e3ae70]"
           >
             Home
           </a>
 
           <a
             href="#services"
-            className="text-sm font-medium text-[#667085] transition hover:text-[#172033]"
+            className="text-[12px] font-medium text-white/85 transition-colors duration-300 hover:text-[#e3ae70]"
           >
             Services
           </a>
 
           <a
             href="#fleet"
-            className="text-sm font-medium text-[#667085] transition hover:text-[#172033]"
+            className="text-[12px] font-medium text-white/85 transition-colors duration-300 hover:text-[#e3ae70]"
           >
             Fleet
           </a>
 
           <a
             href="#about"
-            className="text-sm font-medium text-[#667085] transition hover:text-[#172033]"
+            className="text-[12px] font-medium text-white/85 transition-colors duration-300 hover:text-[#e3ae70]"
           >
-            About
+            About Us
           </a>
 
           <a
             href="#faq"
-            className="text-sm font-medium text-[#667085] transition hover:text-[#172033]"
+            className="text-[12px] font-medium text-white/85 transition-colors duration-300 hover:text-[#e3ae70]"
           >
             FAQ
           </a>
+
+          <a
+            href="#contact"
+            className="text-[12px] font-medium text-white/85 transition-colors duration-300 hover:text-[#e3ae70]"
+          >
+            Contact
+          </a>
+
         </div>
 
-        <div className="flex items-center gap-3">
-          <button className="hidden px-4 py-2 text-sm font-semibold text-[#172033] transition hover:text-[#A97845] md:block">
+        {/* ACTION BUTTONS */}
+
+        <div className="flex shrink-0 items-center gap-4">
+
+          <button
+            className="hidden text-[12px] font-semibold text-[#e3ae70] transition-colors duration-300 hover:text-[#c58b48] sm:block"
+          >
             Sign In
           </button>
 
-          <button className="rounded-full bg-[#172033] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#A97845]">
-            Book a Ride
-          </button>
-
-          <button
-            className="rounded-full border border-[#E6E2DA] px-3 py-2 text-[#172033] lg:hidden"
-            aria-label="Open menu"
+          <a
+            href="#booking"
+            className="rounded-full bg-[#e3ae70] px-6 py-2.5 text-xs font-semibold text-[#171717] transition-all duration-300 hover:bg-[#c58b48] hover:shadow-[0_4px_15px_rgba(197,139,72,0.25)]"
           >
-            ☰
-          </button>
+            Book a Ride
+          </a>
+
         </div>
+
       </nav>
+
     </header>
   );
 }

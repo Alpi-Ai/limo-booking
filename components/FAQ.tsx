@@ -27,35 +27,64 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="px-6 py-16">
-      <div className="mx-auto max-w-4xl">
+    <section
+      id="faq"
+      className="bg-[#f7f2ed] px-5 py-16 sm:px-6 md:py-20"
+    >
+
+      <div className="mx-auto w-full max-w-6xl">
+
+        {/* SECTION HEADING */}
+
         <div className="mb-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
+
+          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#c59655]">
             FAQ
           </p>
 
-          <h2 className="mt-2 text-3xl font-bold text-slate-900">
+          <h2 className="mt-3 text-2xl font-bold tracking-tight text-[#171717] sm:text-3xl">
             Frequently Asked Questions
           </h2>
+
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-[#77716b]">
+            Everything you need to know before booking your journey.
+          </p>
+
         </div>
+
+        {/* FAQ ITEMS */}
 
         <div className="space-y-4">
+
           {faqs.map((faq) => (
+
             <details
               key={faq.id}
-              className="rounded-2xl border border-slate-200 bg-white p-6"
+              className="group rounded-[22px] border border-white/5 bg-[#111111] p-5 shadow-[0_6px_18px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-[#d9a45f]/40 sm:p-6"
             >
-              <summary className="cursor-pointer font-semibold text-slate-900">
+
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold text-white marker:content-none">
+
                 {faq.question}
+
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d9a45f]/25 text-lg font-light text-[#d9a45f] transition-all duration-300 group-open:rotate-45 group-open:bg-[#d9a45f] group-open:text-[#171717]">
+                  +
+                </span>
+
               </summary>
 
-              <p className="mt-4 leading-7 text-slate-600">
+              <p className="mt-4 border-t border-white/10 pt-4 text-xs leading-7 text-white/55 sm:text-sm">
                 {faq.answer}
               </p>
+
             </details>
+
           ))}
+
         </div>
+
       </div>
+
     </section>
   );
 }
